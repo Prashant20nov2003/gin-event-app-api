@@ -2,8 +2,8 @@
 
 ⚠️ **Important**: Before running the application, make sure to set up the database by following the [Database Migrations](#database-migrations) section below.
 
+<img src="/gin-api-docs.png" alt="Gin API Documentation Screenshot" width="100%" style="max-width: 650px; height: auto; display: block; margin: 0 auto;">
 
-<img src="/gin-api-docs.png" alt="Gin API Documentation Screenshot" width="650" height="500">
 
 ### Using Air for Live Reload
 
