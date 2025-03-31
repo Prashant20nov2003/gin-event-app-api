@@ -1,7 +1,3 @@
-# Complete REST API in Go
-
-https://codingwithpatrik.dev/posts/rest-api-in-gin/
-
 ## Development Setup
 
 ⚠️ **Important**: Before running the application, make sure to set up the database by following the [Database Migrations](#database-migrations) section below.
