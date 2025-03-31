@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: gin-event-api
+    env: docker
+    plan: free
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: JWT_SECRET
+        sync: false
+      - key: GIN_MODE
+        value: release

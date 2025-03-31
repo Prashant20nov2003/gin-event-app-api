@@ -1,0 +1,10 @@
+{
+  "subdomain": "gin-api.apidocumentation.com",
+  "references": [
+    {
+      "name": "API Reference",
+      "path": "/docs/swagger.yaml"
+    }
+  ],
+  "guides": []
+}
