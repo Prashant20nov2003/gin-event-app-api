@@ -112,3 +112,23 @@ func (app *application) login(c *gin.Context) {
 	c.JSON(http.StatusOK, loginResponse{Token: tokenString})
 
 }
+
+// GetUserProfile gets the profile of the authenticated user
+//
+//	@Summary		Gets the profile of the authenticated user
+//	@Description	Gets the profile of the authenticated user
+//	@Tags			auth
+//	@Accept			json
+//	@Produce		json
+//	@Success		200	{object}	database.User
+//	@Router			/api/v1/auth/profile [get]
+//	@Security		BearerAuth
+func (app *application) getUserProfile(c *gin.Context) {
+	user := app.GetUserFromContext(c)
+	if user.Id == 0 {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "Unauthorized"})
+		return
+	}
+
+	c.JSON(http.StatusOK, user)
+}

@@ -25,6 +25,7 @@ func (app *application) routes() http.Handler {
 	authGroup := v1.Group("/")
 	authGroup.Use(app.AuthMiddleware())
 	{
+		authGroup.GET("/auth/profile", app.getUserProfile)
 		authGroup.POST("/events", app.createEvent)
 		authGroup.PUT("/events/:id", app.updateEvent)
 		authGroup.DELETE("/events/:id", app.deleteEvent)
