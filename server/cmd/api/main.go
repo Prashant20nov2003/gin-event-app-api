@@ -7,6 +7,7 @@ import (
 	"rest-api-in-gin/internal/database"
 	"rest-api-in-gin/internal/env"
 
+	"github.com/gin-gonic/gin"
 	_ "github.com/joho/godotenv/autoload"
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -26,6 +27,9 @@ type application struct {
 }
 
 func main() {
+	// Set Gin to release mode
+	gin.SetMode(gin.ReleaseMode)
+
 	db, err := sql.Open("sqlite3", "./data.db")
 	if err != nil {
 		log.Fatal(err)
